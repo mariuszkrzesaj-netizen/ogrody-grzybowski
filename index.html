@@ -24,6 +24,7 @@
             <nav class="flex flex-wrap justify-center gap-2 md:gap-4">
                 <button onclick="switchTab('home')" id="btn-home" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-[#06180e] shadow-lg shadow-[#d4af37]/30 font-semibold">Strona Główna</button>
                 <button onclick="switchTab('offer')" id="btn-offer" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">Oferta</button>
+                <button onclick="switchTab('gallery')" id="btn-gallery" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">Galeria</button>
                 <button onclick="switchTab('about')" id="btn-about" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">O Mnie</button>
                 <button onclick="switchTab('contact')" id="btn-contact" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">Kontakt</button>
             </nav>
@@ -35,8 +36,13 @@
         
         <!-- ZAKŁADKA: STRONA GŁÓWNA -->
         <div id="tab-home" class="space-y-12">
-            <div class="relative rounded-3xl overflow-hidden border border-[#d4af37]/30 bg-gradient-to-br from-[#0f2e1a] to-[#06180e] shadow-2xl p-8 md:p-16">
-                <div class="max-w-2xl space-y-6">
+            <div class="relative rounded-3xl overflow-hidden border border-[#d4af37]/30 bg-[#0f2e1a] shadow-2xl">
+                <div class="absolute inset-0 z-0 opacity-40">
+                    <img src="kompleksowe.webp" alt="Zadbany ogród" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-[#06180e] via-[#06180e]/90 to-transparent z-10"></div>
+                
+                <div class="relative z-20 p-8 md:p-16 max-w-2xl space-y-6">
                     <div class="inline-block px-4 py-1.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#d4af37] text-xs font-semibold tracking-wider uppercase">
                         Siechnice, Wrocław i Okolice
                     </div>
@@ -48,7 +54,7 @@
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <button onclick="switchTab('contact')" class="bg-[#d4af37] hover:bg-[#c29d30] text-[#06180e] font-bold px-8 py-3.5 rounded-xl shadow-xl transition-all">Darmowa Wycena</button>
-                        <button onclick="switchTab('offer')" class="bg-[#0f2e1a] hover:bg-[#153b23] border border-[#d4af37]/50 text-white font-semibold px-8 py-3.5 rounded-xl transition-all">Zobacz Usługi</button>
+                        <button onclick="switchTab('offer')" class="bg-[#0f2e1a]/80 hover:bg-[#153b23] border border-[#d4af37]/50 text-white font-semibold px-8 py-3.5 rounded-xl transition-all">Zobacz Usługi</button>
                     </div>
                 </div>
             </div>
@@ -83,13 +89,15 @@
                 
                 <!-- Karta 1 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">🌱</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="koszenie.jpg" alt="Koszenie" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">🌿 Podstawa</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Koszenie i Wertykulacja</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">🌱</span> Koszenie i Wertykulacja
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Regularne koszenie trawników o małych i dużych powierzchniach. Wertykulacja i aeracja poprawiające napowietrzenie i gęstość darni.
                             </p>
@@ -102,13 +110,15 @@
 
                 <!-- Karta 2 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">✂️</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="przycinanie.jpg" alt="Żywopłoty" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">✂️ Pielęgnacja</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Przycinanie Drzew i Krzewów</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">✂️</span> Przycinanie Drzew i Krzewów
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Formowanie i cięcie żywopłotów, krzewów ozdobnych oraz prześwietlanie drzewek owocowych. Dbanie o estetyczny i zdrowy wygląd roślin.
                             </p>
@@ -121,13 +131,15 @@
 
                 <!-- Karta 3 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">🍂</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="porzadkowe1.jpg" alt="Porządki" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">🍂 Sezonowe</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Prace Porządkowe</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">🍂</span> Prace Porządkowe
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Grabienie liści, sprzątanie działek po zimie lub okresie letnim, wywóz odpadów zielonych oraz przygotowanie ogrodów do sezonu zimowego.
                             </p>
@@ -140,13 +152,15 @@
 
                 <!-- Karta 4 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">🪵</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="karczowanie.jpg" alt="Plewienie" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">🌿 Gleba</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Karczowanie i Plewienie</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">🪵</span> Karczowanie i Plewienie
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Usuwanie uciążliwych chwastów, karczowanie zaniedbanych fragmentów działek, plewienie rabat kwiatowych oraz nawożenie ziemi.
                             </p>
@@ -159,13 +173,15 @@
 
                 <!-- Karta 5 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">🏡</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="opieka.webp" alt="Pielęgnacja" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">🌟 Kompleks</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Całoroczna Pielęgnacja</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">🏡</span> Całoroczna Pielęgnacja
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Stała opieka nad ogrodem prywatnym lub firmowym. Regularne wizyty dostosowane do potrzeb Twoich roślin i trawnika przez cały rok.
                             </p>
@@ -178,13 +194,15 @@
 
                 <!-- Karta 6 -->
                 <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                    <div class="h-40 w-full bg-gradient-to-tr from-[#06180e] via-[#0f2e1a] to-[#153b23] flex items-center justify-center relative border-b border-[#d4af37]/20">
-                        <span class="text-5xl">✨</span>
+                    <div class="h-48 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="kostka.webp" alt="Taras" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-[#06180e]/90 px-3 py-1 rounded-full text-xs font-bold text-[#d4af37] border border-[#d4af37]/30">✨ Czystość</span>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Mycie Tarasów i Podjazdów</h3>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <span class="text-[#d4af37]">✨</span> Mycie Tarasów i Podjazdów
+                            </h3>
                             <p class="text-[#a3b899] text-sm mt-2">
                                 Profesjonalne czyszczenie i mycie ciśnieniowe tarasów, ogrodzeń oraz podjazdów z zabrudzeń atmosferycznych i mchu.
                             </p>
@@ -198,15 +216,127 @@
             </div>
         </div>
 
+        <!-- ZAKŁADKA: GALERIA REALIZACJI -->
+        <div id="tab-gallery" class="hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-3xl font-bold text-[#d4af37]">Galeria Realizacji</h2>
+                <p class="text-[#a3b899]">Zobacz przykłady wykonanych przez nas prac ogrodowych i porządkowych.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Zdjęcie 1 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="koszenie.jpg" alt="Koszenie trawnika" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Koszenie trawnika</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 2 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="wertykulacja.jpg" alt="Wertykulacja trawnika" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Wertykulacja i napowietrzanie</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 3 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="przycinanie.jpg" alt="Przycinanie krzewów" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Precyzyjne przycinanie żywopłotów</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 4 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="karczowanie.jpg" alt="Karczowanie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Karczowanie i wycinka</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 5 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="wycinka1.jpeg" alt="Wycinka i pielęgnacja drzew" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Wycinka i pielęgnacja drzew</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 6 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="opieka.webp" alt="Pielęgnacja rabat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Pielęgnacja rabat i plewienie</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 7 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="porzadkowe1.jpg" alt="Prace porządkowe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Porządki i wywóz odpadów</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 8 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="porzadkowe2.jpeg" alt="Sprzątanie terenu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Sprzątanie po pracach</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 9 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="kostka.webp" alt="Mycie kostki i tarasów" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Mycie ciśnieniowe nawierzchni</h4>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie 10 -->
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl group md:col-span-2 lg:col-span-3">
+                    <div class="h-64 w-full overflow-hidden relative bg-[#06180e]">
+                        <img src="kompleksowe.webp" alt="Kompleksowy widok ogrodu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="text-white font-semibold text-sm">Efekt końcowy kompleksowej opieki nad ogrodem</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <!-- ZAKŁADKA: O MNIE -->
         <div id="tab-about" class="hidden max-w-4xl mx-auto space-y-8 bg-[#0f2e1a] border border-[#d4af37]/30 p-8 md:p-12 rounded-3xl shadow-2xl">
             <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="w-full md:w-1/3 flex justify-center">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8a7323] flex items-center justify-center text-[#06180e] text-5xl shadow-xl border-4 border-[#06180e]">
-                        👨‍🌾
+                <div class="w-full md:w-1/3">
+                    <div class="aspect-square rounded-2xl overflow-hidden border-2 border-[#d4af37]/40 shadow-xl bg-[#06180e]">
+                        <img src="kompleksowe.webp" alt="Edward Grzybowski" class="w-full h-full object-cover">
                     </div>
                 </div>
-                <div class="w-full md:w-2/3 space-y-4 text-center md:text-left">
+                <div class="w-full md:w-2/3 space-y-4">
                     <span class="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">O fachowcu</span>
                     <h2 class="text-3xl font-bold text-white">Edward Grzybowski</h2>
                     <p class="text-[#d1ded0] leading-relaxed">
@@ -270,7 +400,7 @@
                         <label class="block text-xs text-[#a3b899] mb-1">Wiadomość</label>
                         <textarea id="fmsg" rows="3" class="w-full bg-[#06180e] border border-[#d4af37]/30 rounded-xl px-4 py-3 text-white text-sm" placeholder="Opisz co jest do zrobienia..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-[#d4af37] hover:bg-[#c29d30] text-[#06180e] font-bold py-3.5 rounded-xl transition-all">Wyślij Zapytanie (E-mail)</button>
+                    <button type="submit" class="w-full bg-[#d4af37] hover:bg-[#c29d30] text-[#06180e] font-bold py.3.5 rounded-xl transition-all">Wyślij Zapytanie (E-mail)</button>
                 </form>
             </div>
         </div>
@@ -285,12 +415,16 @@
 
     <script>
         function switchTab(tab) {
-            ['home', 'offer', 'about', 'contact'].forEach(t => {
-                document.getElementById('tab-' + t).classList.add('hidden');
-                document.getElementById('btn-' + t).className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]";
+            ['home', 'offer', 'gallery', 'about', 'contact'].forEach(t => {
+                const tabEl = document.getElementById('tab-' + t);
+                const btnEl = document.getElementById('btn-' + t);
+                if (tabEl) tabEl.classList.add('hidden');
+                if (btnEl) btnEl.className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]";
             });
-            document.getElementById('tab-' + tab).classList.remove('hidden');
-            document.getElementById('btn-' + tab).className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-[#06180e] shadow-lg shadow-[#d4af37]/30 font-semibold";
+            const activeTab = document.getElementById('tab-' + tab);
+            const activeBtn = document.getElementById('btn-' + tab);
+            if (activeTab) activeTab.classList.remove('hidden');
+            if (activeBtn) activeBtn.className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-[#06180e] shadow-lg shadow-[#d4af37]/30 font-semibold";
             window.scrollTo(0, 0);
         }
         function handleFormSubmit(e) {
