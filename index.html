@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Grzybowski – Usługi Ogrodnicze i Porządkowe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-[#06180e] text-[#f4f4f4] font-sans antialiased selection:bg-[#d4af37] selection:text-black">
+
+    <!-- NAGŁÓWEK -->
+    <header class="sticky top-0 z-50 bg-[#06180e]/95 border-b border-[#d4af37]/30 shadow-2xl">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('home')">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8a7323] flex items-center justify-center text-[#06180e] font-bold text-xl shadow-lg shadow-[#d4af37]/20">
+                    🌿
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wider text-[#d4af37]">EDWARD GRZYBOWSKI</h1>
+                    <p class="text-xs text-[#a3b899] tracking-widest uppercase">Usługi Ogrodnicze i Porządkowe</p>
+                </div>
+            </div>
+
+            <nav class="flex flex-wrap justify-center gap-2 md:gap-4">
+                <button onclick="switchTab('home')" id="btn-home" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-[#06180e] shadow-lg shadow-[#d4af37]/30 font-semibold">Strona Główna</button>
+                <button onclick="switchTab('offer')" id="btn-offer" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">Oferta</button>
+                <button onclick="switchTab('about')" id="btn-about" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">O Mnie</button>
+                <button onclick="switchTab('contact')" id="btn-contact" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]">Kontakt</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ZAWARTOŚĆ -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        
+        <!-- STRONA GŁÓWNA -->
+        <div id="tab-home" class="space-y-12">
+            <div class="relative rounded-3xl overflow-hidden border border-[#d4af37]/30 bg-[#0f2e1a] shadow-2xl">
+                <div class="absolute inset-0 z-0 opacity-40">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1600&auto=format&fit=crop" alt="Ogród" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-[#06180e] via-[#06180e]/90 to-transparent z-10"></div>
+                <div class="relative z-20 p-8 md:p-16 max-w-2xl space-y-6">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#d4af37] text-xs font-semibold tracking-wider uppercase">
+                        Siechnice, Wrocław i Okolice
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Twój ogród w <span class="text-[#d4af37]">dobrych rękach!</span>
+                    </h2>
+                    <p class="text-[#d1ded0] text-base md:text-lg">
+                        Profesjonalne usługi ogrodnicze i porządkowe. Rzetelność, terminowość i podejście typu „robię jak u siebie!”.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button onclick="switchTab('contact')" class="bg-[#d4af37] hover:bg-[#c29d30] text-[#06180e] font-bold px-8 py-3.5 rounded-xl shadow-xl transition-all">Darmowa Wycena</button>
+                        <button onclick="switchTab('offer')" class="bg-[#0f2e1a]/80 hover:bg-[#153b23] border border-[#d4af37]/50 text-white font-semibold px-8 py-3.5 rounded-xl transition-all">Zobacz Usługi</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#0f2e1a]/60 border border-[#d4af37]/20 p-6 rounded-2xl shadow-xl space-y-3">
+                    <div class="text-3xl">⏱️</div>
+                    <h3 class="text-xl font-bold text-[#d4af37]">Szybkie Terminy</h3>
+                    <p class="text-[#a3b899] text-sm">Szybka reakcja na zgłoszenie i sprawne wykonanie zleconych prac ogrodowych.</p>
+                </div>
+                <div class="bg-[#0f2e1a]/60 border border-[#d4af37]/20 p-6 rounded-2xl shadow-xl space-y-3">
+                    <div class="text-3xl">🛠️</div>
+                    <h3 class="text-xl font-bold text-[#d4af37]">Sprzęt Profesjonalny</h3>
+                    <p class="text-[#a3b899] text-sm">Pracujemy na wysokiej klasy niezawodnym sprzęcie spalinowym i akumulatorowym.</p>
+                </div>
+                <div class="bg-[#0f2e1a]/60 border border-[#d4af37]/20 p-6 rounded-2xl shadow-xl space-y-3">
+                    <div class="text-3xl">🤝</div>
+                    <h3 class="text-xl font-bold text-[#d4af37]">Uczciwe Podejście</h3>
+                    <p class="text-[#a3b899] text-sm">Darmowa wycena na miejscu u klienta i dokładność w każdym detalu – robię jak u siebie!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OFERTA -->
+        <div id="tab-offer" class="hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-3xl font-bold text-[#d4af37]">Kompleksowa Oferta Usług</h2>
+                <p class="text-[#a3b899]">Zadbaj o swój zielony zakątek przez cały rok z profesjonalną pomocą.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                    <div class="h-48 relative bg-[#06180e]"><img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb26b6e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div><h3 class="text-xl font-bold text-white">🌱 Koszenie i Wertykulacja</h3><p class="text-[#a3b899] text-sm mt-2">Regularne koszenie trawników, wertykulacja i aeracja poprawiające gęstość darni.</p></div>
+                        <button onclick="switchTab('contact')" class="w-full bg-[#d4af37]/20 hover:bg-[#d4af37] text-[#d4af37] hover:text-[#06180e] font-semibold py-2.5 rounded-xl border border-[#d4af37]/40 transition-all text-sm">Zapytaj o wycenę</button>
+                    </div>
+                </div>
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                    <div class="h-48 relative bg-[#06180e]"><img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div><h3 class="text-xl font-bold text-white">✂️ Przycinanie Krzewów</h3><p class="text-[#a3b899] text-sm mt-2">Formowanie żywopłotów, cięcie krzewów ozdobnych oraz prześwietlanie drzewek.</p></div>
+                        <button onclick="switchTab('contact')" class="w-full bg-[#d4af37]/20 hover:bg-[#d4af37] text-[#d4af37] hover:text-[#06180e] font-semibold py-2.5 rounded-xl border border-[#d4af37]/40 transition-all text-sm">Zapytaj o wycenę</button>
+                    </div>
+                </div>
+                <div class="bg-[#0f2e1a] border border-[#d4af37]/30 rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                    <div class="h-48 relative bg-[#06180e]"><img src="https://images.unsplash.com/photo-1584467735818-f2f9f8c8d84d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div><h3 class="text-xl font-bold text-white">🍂 Prace Porządkowe</h3><p class="text-[#a3b899] text-sm mt-2">Grabienie liści, sprzątanie działek po sezonie, wywóz odpadów zielonych.</p></div>
+                        <button onclick="switchTab('contact')" class="w-full bg-[#d4af37]/20 hover:bg-[#d4af37] text-[#d4af37] hover:text-[#06180e] font-semibold py-2.5 rounded-xl border border-[#d4af37]/40 transition-all text-sm">Zapytaj o wycenę</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- O MNIE -->
+        <div id="tab-about" class="hidden max-w-4xl mx-auto space-y-8 bg-[#0f2e1a] border border-[#d4af37]/30 p-8 md:p-12 rounded-3xl shadow-2xl">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden border-2 border-[#d4af37]/40">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-2/3 space-y-4">
+                    <span class="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">O fachowcu</span>
+                    <h2 class="text-3xl font-bold text-white">Edward Grzybowski</h2>
+                    <p class="text-[#d1ded0] leading-relaxed">Od lat zajmuję się profesjonalną pielęgnacją terenów zielonych. Robię wszystko jak u siebie – dokładnie, solidnie i terminowo.</p>
+                    <p class="text-[#a3b899] text-sm">Działam w Siechnicach, Wrocławiu i okolicach.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KONTAKT -->
+        <div id="tab-contact" class="hidden max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-[#0f2e1a] border border-[#d4af37]/30 p-8 rounded-3xl shadow-2xl space-y-6">
+                <div>
+                    <span class="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">Kontakt</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">Zadzwoń lub napisz</h2>
+                </div>
+                <div class="space-y-4">
+                    <a href="tel:505505740" class="flex items-center gap-4 bg-[#06180e] p-4 rounded-2xl border border-[#d4af37]/20">
+                        <div class="text-[#d4af37] text-xl">📞</div>
+                        <div><span class="text-xs text-[#a3b899] block">Telefon główny</span><span class="text-lg font-bold text-white">505 505 740</span></div>
+                    </a>
+                    <a href="tel:571212525" class="flex items-center gap-4 bg-[#06180e] p-4 rounded-2xl border border-[#d4af37]/20">
+                        <div class="text-[#d4af37] text-xl">📱</div>
+                        <div><span class="text-xs text-[#a3b899] block">Telefon pomocniczy</span><span class="text-lg font-bold text-white">571 212 525</span></div>
+                    </a>
+                    <a href="mailto:e-dogreenserwis@o2.pl" class="flex items-center gap-4 bg-[#06180e] p-4 rounded-2xl border border-[#d4af37]/20">
+                        <div class="text-[#d4af37] text-xl">✉️</div>
+                        <div><span class="text-xs text-[#a3b899] block">E-mail</span><span class="text-sm font-semibold text-white">e-dogreenserwis@o2.pl</span></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#0f2e1a] border border-[#d4af37]/30 p-8 rounded-3xl shadow-2xl">
+                <h3 class="text-xl font-bold text-white mb-4">Szybkie Zapytanie</h3>
+                <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div><label class="block text-xs text-[#a3b899] mb-1">Twoje Imię</label><input type="text" id="fname" required class="w-full bg-[#06180e] border border-[#d4af37]/30 rounded-xl px-4 py-3 text-white text-sm" placeholder="np. Jan Kowalski"></div>
+                    <div><label class="block text-xs text-[#a3b899] mb-1">Numer Telefonu</label><input type="tel" id="fphone" required class="w-full bg-[#06180e] border border-[#d4af37]/30 rounded-xl px-4 py-3 text-white text-sm" placeholder="np. 500 600 700"></div>
+                    <div><label class="block text-xs text-[#a3b899] mb-1">Wiadomość</label><textarea id="fmsg" rows="3" class="w-full bg-[#06180e] border border-[#d4af37]/30 rounded-xl px-4 py-3 text-white text-sm" placeholder="Opisz co jest do zrobienia..."></textarea></div>
+                    <button type="submit" class="w-full bg-[#d4af37] hover:bg-[#c29d30] text-[#06180e] font-bold py-3.5 rounded-xl transition-all">Wyślij Zapytanie (E-mail)</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- STOPKA -->
+    <footer class="mt-20 border-t border-[#d4af37]/20 bg-[#06180e] py-8 text-center text-xs text-[#a3b899] space-y-2">
+        <p>© 2026 Edward Grzybowski – Usługi Ogrodnicze i Porządkowe.</p>
+        <p class="tracking-widest uppercase text-[#d4af37]/80">PROJEKT: SOMIKO DIGITAL STUDIO</p>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            ['home', 'offer', 'about', 'contact'].forEach(t => {
+                document.getElementById('tab-' + t).classList.add('hidden');
+                document.getElementById('btn-' + t).className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#0f2e1a] text-[#d1ded0] hover:bg-[#153b23]";
+            });
+            document.getElementById('tab-' + tab).classList.remove('hidden');
+            document.getElementById('btn-' + tab).className = "px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-[#06180e] shadow-lg shadow-[#d4af37]/30 font-semibold";
+            window.scrollTo(0, 0);
+        }
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('fname').value;
+            const phone = document.getElementById('fphone').value;
+            const msg = document.getElementById('fmsg').value;
+            const subject = encodeURIComponent("Nowe zapytanie z wizytówki od: " + name);
+            const body = encodeURIComponent("Imię: " + name + "\nTelefon: " + phone + "\n\nWiadomość:\n" + msg);
+            window.location.href = "mailto:e-dogreenserwis@o2.pl?subject=" + subject + "&body=" + body;
+        }
+    </script>
+</body>
+</html>
